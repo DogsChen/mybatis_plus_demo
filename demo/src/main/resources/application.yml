@@ -1,0 +1,24 @@
+server:
+  port: 5001
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.3.110:3306/demo?serverTimezone=UTC&useSSL=true&useUnicode=true&characterEncoding=UTF-8
+    username: archives_db
+    password: 8zajN3vpQdGfjGFDE0ZmSW4yBf1cTmeX
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+#      schema-locations: classpath:db/init.sql
+#      data-locations: classpath:db/data-h2.sql
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+
+logging:
+  level:
+    com.example.dao.mapper: debug
+
